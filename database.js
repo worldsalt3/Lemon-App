@@ -66,6 +66,6 @@ export function saveMenuItems(menuItems) {
  */
 export async function filterByQueryAndCategories(query, activeCategories) {
   return new Promise((resolve, reject) => {
-    resolve([]);
+    resolve(SECTION_LIST_MOCK_DATA);
   });
 }

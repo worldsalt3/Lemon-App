@@ -69,8 +69,6 @@ export function getSectionListData(data) {
   // The title of each section should be the category.
   // The data property should contain an array of menu items.
   // Each item has the following properties: "id", "title" and "price"
-  // console.log(data, "dat");
-
   return transformData(data);
 }
 

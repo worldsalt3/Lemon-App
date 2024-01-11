@@ -64,18 +64,16 @@ export default function App() {
     (async () => {
       try {
         await createTable();
-        let menuItems = await getMenuItems();
-
-        // console.log(await getMenuItems());
+        // let menuItems = await getMenuItems();
 
         // The application only fetches the menu data once from a remote URL
         // and then stores it into a SQLite database.
         // After that, every application restart loads the menu from the database
-        if (!menuItems.length) {
-          const menuItems = await fetchData();
-          // console.log(menuItems, "menuItems");
-          saveMenuItems(menuItems);
-        }
+        // if (!menuItems.length) {
+        const menuItems = await fetchData();
+        // console.log(menuItems, "menuItems");
+        saveMenuItems(menuItems);
+        // }
 
         // console.log(menuItems, "menuItems");
         const sectionListData = getSectionListData(menuItems);
